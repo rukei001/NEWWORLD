@@ -1,0 +1,72 @@
+@property --color1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(34, 211, 238);
+}
+
+@property --color2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(139, 92, 246);
+}
+
+@property --color3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(247, 93, 205);
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+
+  --color1: rgb(34, 211, 238);
+  --color2: rgb(139, 92, 246);
+  --color3: rgb(247, 93, 205);
+
+  background-image: radial-gradient(var(--color1),
+      var(--color2) 54%,
+      var(--color3));
+
+  transition:
+    --color1 2s linear,
+    --color2 2s linear,
+    --color3 2s linear;
+}
+
+h1,
+p {
+  color: aliceblue;
+}
+
+button{
+    appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  padding: 12px 32px;
+  margin-top: 16px;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+
+  font: inherit;
+  letter-spacing: 0.3em;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(8px);
+}
+
+.mask{
+  
+}
